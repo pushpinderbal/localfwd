@@ -1,0 +1,14 @@
+[tools]
+go = "1.27"
+
+[tasks.build]
+description = "Build localfwd"
+run = "go build -trimpath -o bin/localfwd ./cmd/localfwd"
+
+[tasks.test]
+description = "Run the test suite"
+run = "go test ./..."
+
+[tasks.check]
+description = "Format, vet, and test"
+run = "test -z \"$(gofmt -l .)\" && go vet ./... && go test ./..."
