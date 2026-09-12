@@ -32,17 +32,22 @@ jobs:
       - name: Validate version
         id: version
         env:
+          GH_TOKEN: ${{ github.token }}
           INPUT_VERSION: ${{ inputs.version }}
         shell: bash
         run: |
           set -euo pipefail
           version="${INPUT_VERSION#v}"
-          if [[ ! "$version" =~ ^[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z.-]+)?$ ]]; then
-            echo "Version must be SemVer, such as 0.3.0 or 0.4.0-rc.1" >&2
-            exit 1
-          fi
-
           tag="v${version}"
+
+          existing_versions="$(
+            gh api --paginate \
+              "repos/${GITHUB_REPOSITORY}/releases?per_page=100" \
+              --jq '.[].tag_name'
+          )"
+          printf '%s\n' "$existing_versions" \
+            | go run ./scripts/check-release-version.go "$tag"
+
           if git rev-parse --verify --quiet "refs/tags/${tag}" >/dev/null; then
             echo "Tag ${tag} already exists" >&2
             exit 1

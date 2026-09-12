@@ -2,7 +2,10 @@ module github.com/localfwd/localfwd
 
 go 1.27
 
-require charm.land/bubbletea/v2 v2.0.9
+require (
+	charm.land/bubbletea/v2 v2.0.9
+	golang.org/x/mod v0.41.0
+)
 
 require (
 	github.com/charmbracelet/colorprofile v0.4.3 // indirect
