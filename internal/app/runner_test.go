@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/localfwd/localfwd/internal/discovery"
-	"github.com/localfwd/localfwd/internal/ports"
+	"github.com/pushpinderbal/localfwd/internal/discovery"
+	"github.com/pushpinderbal/localfwd/internal/ports"
 )
 
 type recordedForward struct {

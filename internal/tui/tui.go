@@ -8,7 +8,7 @@ import (
 
 	tea "charm.land/bubbletea/v2"
 
-	"github.com/localfwd/localfwd/internal/app"
+	"github.com/pushpinderbal/localfwd/internal/app"
 )
 
 const firstItemRow = 3

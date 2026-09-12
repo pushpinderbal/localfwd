@@ -7,9 +7,9 @@ import (
 	"sort"
 	"time"
 
-	"github.com/localfwd/localfwd/internal/discovery"
-	"github.com/localfwd/localfwd/internal/ports"
-	"github.com/localfwd/localfwd/internal/sshctl"
+	"github.com/pushpinderbal/localfwd/internal/discovery"
+	"github.com/pushpinderbal/localfwd/internal/ports"
+	"github.com/pushpinderbal/localfwd/internal/sshctl"
 )
 
 const (

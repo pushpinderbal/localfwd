@@ -13,10 +13,10 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/localfwd/localfwd/internal/app"
-	"github.com/localfwd/localfwd/internal/ports"
-	"github.com/localfwd/localfwd/internal/sshctl"
-	"github.com/localfwd/localfwd/internal/tui"
+	"github.com/pushpinderbal/localfwd/internal/app"
+	"github.com/pushpinderbal/localfwd/internal/ports"
+	"github.com/pushpinderbal/localfwd/internal/sshctl"
+	"github.com/pushpinderbal/localfwd/internal/tui"
 )
 
 var version = "dev"

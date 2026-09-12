@@ -1,4 +1,4 @@
-module github.com/localfwd/localfwd
+module github.com/pushpinderbal/localfwd
 
 go 1.27
 

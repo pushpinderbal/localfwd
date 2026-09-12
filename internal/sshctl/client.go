@@ -14,7 +14,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/localfwd/localfwd/internal/discovery"
+	"github.com/pushpinderbal/localfwd/internal/discovery"
 )
 
 type Config struct {
