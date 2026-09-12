@@ -19,7 +19,7 @@ import (
 	"github.com/localfwd/localfwd/internal/tui"
 )
 
-const version = "0.3.0"
+var version = "dev"
 
 type stringList []string
 
